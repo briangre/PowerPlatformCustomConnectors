@@ -1,0 +1,504 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Jenkins API Test",
+    "description": "A connector to invoke the Jenkins API",
+    "version": "1.0"
+  },
+  "host": "",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/job/{jobname}/api/json": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "_class": {
+                  "type": "string",
+                  "description": "_class"
+                },
+                "actions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_class": {
+                        "type": "string",
+                        "description": "_class"
+                      }
+                    }
+                  },
+                  "description": "actions"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "description"
+                },
+                "displayName": {
+                  "type": "string",
+                  "description": "displayName"
+                },
+                "displayNameOrNull": {
+                  "type": "string",
+                  "description": "displayNameOrNull"
+                },
+                "fullDisplayName": {
+                  "type": "string",
+                  "description": "fullDisplayName"
+                },
+                "fullName": {
+                  "type": "string",
+                  "description": "fullName"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "url"
+                },
+                "buildable": {
+                  "type": "boolean",
+                  "description": "buildable"
+                },
+                "builds": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_class": {
+                        "type": "string",
+                        "description": "_class"
+                      },
+                      "number": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "number"
+                      },
+                      "url": {
+                        "type": "string",
+                        "description": "url"
+                      }
+                    }
+                  },
+                  "description": "builds"
+                },
+                "color": {
+                  "type": "string",
+                  "description": "color"
+                },
+                "firstBuild": {
+                  "type": "object",
+                  "properties": {
+                    "_class": {
+                      "type": "string",
+                      "description": "_class"
+                    },
+                    "number": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "number"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "url"
+                    }
+                  },
+                  "description": "firstBuild"
+                },
+                "healthReport": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "description": {
+                        "type": "string",
+                        "description": "description"
+                      },
+                      "iconClassName": {
+                        "type": "string",
+                        "description": "iconClassName"
+                      },
+                      "iconUrl": {
+                        "type": "string",
+                        "description": "iconUrl"
+                      },
+                      "score": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "score"
+                      }
+                    }
+                  },
+                  "description": "healthReport"
+                },
+                "inQueue": {
+                  "type": "boolean",
+                  "description": "inQueue"
+                },
+                "keepDependencies": {
+                  "type": "boolean",
+                  "description": "keepDependencies"
+                },
+                "lastBuild": {
+                  "type": "object",
+                  "properties": {
+                    "_class": {
+                      "type": "string",
+                      "description": "_class"
+                    },
+                    "number": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "number"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "url"
+                    }
+                  },
+                  "description": "lastBuild"
+                },
+                "lastCompletedBuild": {
+                  "type": "object",
+                  "properties": {
+                    "_class": {
+                      "type": "string",
+                      "description": "_class"
+                    },
+                    "number": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "number"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "url"
+                    }
+                  },
+                  "description": "lastCompletedBuild"
+                },
+                "lastFailedBuild": {
+                  "type": "object",
+                  "properties": {
+                    "_class": {
+                      "type": "string",
+                      "description": "_class"
+                    },
+                    "number": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "number"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "url"
+                    }
+                  },
+                  "description": "lastFailedBuild"
+                },
+                "lastStableBuild": {
+                  "type": "object",
+                  "properties": {
+                    "_class": {
+                      "type": "string",
+                      "description": "_class"
+                    },
+                    "number": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "number"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "url"
+                    }
+                  },
+                  "description": "lastStableBuild"
+                },
+                "lastSuccessfulBuild": {
+                  "type": "object",
+                  "properties": {
+                    "_class": {
+                      "type": "string",
+                      "description": "_class"
+                    },
+                    "number": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "number"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "url"
+                    }
+                  },
+                  "description": "lastSuccessfulBuild"
+                },
+                "lastUnstableBuild": {
+                  "type": "string",
+                  "description": "lastUnstableBuild"
+                },
+                "lastUnsuccessfulBuild": {
+                  "type": "object",
+                  "properties": {
+                    "_class": {
+                      "type": "string",
+                      "description": "_class"
+                    },
+                    "number": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "number"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "url"
+                    }
+                  },
+                  "description": "lastUnsuccessfulBuild"
+                },
+                "nextBuildNumber": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "nextBuildNumber"
+                },
+                "property": {
+                  "type": "array",
+                  "items": {},
+                  "description": "property"
+                },
+                "queueItem": {
+                  "type": "string",
+                  "description": "queueItem"
+                },
+                "concurrentBuild": {
+                  "type": "boolean",
+                  "description": "concurrentBuild"
+                },
+                "disabled": {
+                  "type": "boolean",
+                  "description": "disabled"
+                },
+                "downstreamProjects": {
+                  "type": "array",
+                  "items": {},
+                  "description": "downstreamProjects"
+                },
+                "labelExpression": {
+                  "type": "string",
+                  "description": "labelExpression"
+                },
+                "scm": {
+                  "type": "object",
+                  "properties": {
+                    "_class": {
+                      "type": "string",
+                      "description": "_class"
+                    }
+                  },
+                  "description": "scm"
+                },
+                "upstreamProjects": {
+                  "type": "array",
+                  "items": {},
+                  "description": "upstreamProjects"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get job information",
+        "description": "Action to retrieve job information",
+        "operationId": "GetJobInfo",
+        "parameters": [
+          {
+            "name": "jobname",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/api/json": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "_class": {
+                  "type": "string",
+                  "description": "_class"
+                },
+                "assignedLabels": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "name"
+                      }
+                    }
+                  },
+                  "description": "assignedLabels"
+                },
+                "mode": {
+                  "type": "string",
+                  "description": "mode"
+                },
+                "nodeDescription": {
+                  "type": "string",
+                  "description": "nodeDescription"
+                },
+                "nodeName": {
+                  "type": "string",
+                  "description": "nodeName"
+                },
+                "numExecutors": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "numExecutors"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "description"
+                },
+                "jobs": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_class": {
+                        "type": "string",
+                        "description": "_class"
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "name"
+                      },
+                      "url": {
+                        "type": "string",
+                        "description": "url"
+                      },
+                      "color": {
+                        "type": "string",
+                        "description": "color"
+                      }
+                    }
+                  },
+                  "description": "jobs"
+                },
+                "overallLoad": {
+                  "type": "object",
+                  "properties": {},
+                  "description": "overallLoad"
+                },
+                "primaryView": {
+                  "type": "object",
+                  "properties": {
+                    "_class": {
+                      "type": "string",
+                      "description": "_class"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "name"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "url"
+                    }
+                  },
+                  "description": "primaryView"
+                },
+                "quietDownReason": {
+                  "type": "string",
+                  "description": "quietDownReason"
+                },
+                "quietingDown": {
+                  "type": "boolean",
+                  "description": "quietingDown"
+                },
+                "slaveAgentPort": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "slaveAgentPort"
+                },
+                "unlabeledLoad": {
+                  "type": "object",
+                  "properties": {
+                    "_class": {
+                      "type": "string",
+                      "description": "_class"
+                    }
+                  },
+                  "description": "unlabeledLoad"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "url"
+                },
+                "useCrumbs": {
+                  "type": "boolean",
+                  "description": "useCrumbs"
+                },
+                "useSecurity": {
+                  "type": "boolean",
+                  "description": "useSecurity"
+                },
+                "views": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_class": {
+                        "type": "string",
+                        "description": "_class"
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "name"
+                      },
+                      "url": {
+                        "type": "string",
+                        "description": "url"
+                      }
+                    }
+                  },
+                  "description": "views"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get all jobs",
+        "description": "Action to get all jobs on instance",
+        "operationId": "GetJobs",
+        "parameters": []
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "undefined": {
+      "type": "basic"
+    }
+  },
+  "security": [],
+  "tags": []
+}
