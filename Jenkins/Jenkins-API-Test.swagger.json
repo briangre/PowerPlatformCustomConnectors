@@ -511,6 +511,27 @@
           }
         ]
       }
+    },
+    "/job/{jobname}/config.xml": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Get Job ConfigXml",
+        "description": "Action to retrieve job configuration in xml format",
+        "operationId": "GetJobConfigXml",
+        "parameters": [
+          {
+            "name": "jobname",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
     }
   },
   "definitions": {},
