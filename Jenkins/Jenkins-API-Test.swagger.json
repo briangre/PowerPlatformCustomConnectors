@@ -5,7 +5,7 @@
     "description": "A connector to invoke the Jenkins API",
     "version": "1.0"
   },
-  "host": "",
+  "host": "40.70.129.232:8080",
   "basePath": "/",
   "schemes": [
     "http"
@@ -489,16 +489,42 @@
         "operationId": "GetJobs",
         "parameters": []
       }
+    },
+    "/{jobname}/build": {},
+    "/job/{jobname}/build": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Build Job",
+        "description": "Action to build the specified job",
+        "operationId": "BuildJob",
+        "parameters": [
+          {
+            "name": "jobname",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
     }
   },
   "definitions": {},
   "parameters": {},
   "responses": {},
   "securityDefinitions": {
-    "undefined": {
+    "basic_auth": {
       "type": "basic"
     }
   },
-  "security": [],
+  "security": [
+    {
+      "basic_auth": []
+    }
+  ],
   "tags": []
 }
